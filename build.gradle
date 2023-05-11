@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group = 'aaj'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation platform('io.projectreactor:reactor-bom:2022.0.6')
+    implementation 'io.projectreactor:reactor-core'
+}
+
+test {
+    useJUnitPlatform()
+}
